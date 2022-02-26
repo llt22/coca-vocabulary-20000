@@ -13,7 +13,7 @@
 ![deterrent](images/deterrent.jpg)
 
 
-# COCA 20000 词库介绍
+# COCA 词库介绍
 [如何积累20000词汇量（COCA词频）](https://zhuanlan.zhihu.com/p/20800565)
 
 # 🤝 贡献 | Contributing

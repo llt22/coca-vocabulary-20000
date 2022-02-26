@@ -17,7 +17,7 @@ fs.readdir('excel', (err, files) => {
             const phonetic = item[1]
             const paraphrase = item[2]
             if (count % 200 === 0) {
-                fileName = `md/${count + 1}_${count + 200}.md`
+                fileName = `words/${count + 1}_${count + 200}.md`
                 writeStream = fs.createWriteStream(fileName, {
                     flags: 'a' // 'a' means appending (old data will be preserved)
                 })
