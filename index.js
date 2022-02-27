@@ -12,6 +12,7 @@ function PrefixZero(num, n) {
 
 fs.readdir('excel', (err, files) => {
     files.forEach(file => {
+        console.log(`excel/${file}`)
         const workbook = XLSX.readFile(`excel/${file}`)
         const sheetName = workbook.SheetNames[0]
         const worksheet = workbook.Sheets[sheetName]
