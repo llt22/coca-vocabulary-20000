@@ -6,6 +6,10 @@ let part = 0
 let fileName
 let writeStream
 
+function PrefixZero(num, n) {
+    return (Array(n).join(0) + num).slice(-n);
+}
+
 fs.readdir('excel', (err, files) => {
     files.forEach(file => {
         const workbook = XLSX.readFile(`excel/${file}`)
@@ -19,7 +23,7 @@ fs.readdir('excel', (err, files) => {
             const paraphrase = item[2]
             if (count % 200 === 0) {
                 part += 1
-                fileName = `vocabulary/part${part}_${count + 1}-${count + 200}.md`
+                fileName = `vocabulary/part${PrefixZero(part, 3)}_${count + 1}-${count + 200}.md`
                 writeStream = fs.createWriteStream(fileName, {
                     flags: 'a' // 'a' means appending (old data will be preserved)
                 })
